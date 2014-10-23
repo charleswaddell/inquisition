@@ -147,7 +147,7 @@ class InquisitionFileParser implements Iterator
 		$encoding = '8bit';
 
 		if (mb_strpos($data[0], $bom, 0, $encoding) === 0) {
-			$file->fseek(mb_strlen($bom, $encoding));
+			$this->file->fseek(mb_strlen($bom, $encoding));
 		}
 	}
 
